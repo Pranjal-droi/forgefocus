@@ -1,0 +1,119 @@
+/* Features Page Styles */
+/* Navigation (shared across all pages) */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #6c5ce7;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+nav a {
+  text-decoration: none;
+  font-weight: 500;
+  color: #2d3436;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #f0f0f0;
+  color: #6c5ce7;
+}
+
+nav a.active {
+  color: #ff5eaa;
+  font-weight: 600;
+}
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+.container h1 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: var(--primary);
+  animation: fadeInDown 0.6s ease;
+  text-align: center;
+}
+
+.container ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 1000px;
+  animation: fadeIn 0.6s ease;
+}
+
+.container ul li {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 25px 20px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-left: 5px solid var(--primary);
+  position: relative;
+}
+
+.container ul li:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.container ul li strong {
+  display: block;
+  font-size: 1.1rem;
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+/* Animation Keyframes */
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Footer */
+footer {
+  margin-top: 60px;
+  padding: 20px;
+  text-align: center;
+  background: #f1f1f1;
+  color: #777;
+}
+@media (max-width: 600px) {
+  .container ul {
+    grid-template-columns: 1fr;
+  }
+}   

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contact – FocusForge</title>
+ <link rel="stylesheet" href="contact.css">
+  <!-- Add this for fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  
+  <header>
+    <a href="index.html" class="logo">FocusForge</a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="features.html">Features</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h1>📩 Contact Us</h1>
+    <p>If you have feedback, suggestions, or need support, feel free to reach out!</p>
+    <form action="/contact" method="post">
+      <label for="name">Name:</label><br>
+      <input type="text" id="name" name="name" required style="width:100%; padding:10px; margin:10px 0;"><br>
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="email" required style="width:100%; padding:10px; margin:10px 0;"><br>
+      <label for="message">Message:</label><br>
+      <textarea id="message" name="message" rows="5" required style="width:100%; padding:10px; margin:10px 0;"></textarea><br>
+      <button type="submit" style="padding:10px 20px; background: var(--main-color); color:white; border:none; border-radius:6px;">Send</button>
+    </form>
+  </div>
+
+  <footer>&copy; 2025 FocusForge</footer>
+  <script src="app.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>{% block title %}FocusForge{% endblock %}</title>
+ <link rel="stylesheet" href="base.css">
+</head>
+<body>
+  <header>
+    <div class="logo">FocusForge</div>
+    <nav>
+      <a href="{index.html}">Home</a>
+      <a href="{features.html}">Features</a>
+      <a href="{dashboard.html}">Dashboard</a>
+      <a href="{contact.html}">Contact</a>
+      {% if session.get('user') %}
+        <a href="{logout.html}">Logout</a>
+      {% else %}
+        <a href="{login.html}">Login</a>
+        <a href="{signup.html}">Sign Up</a>
+      {% endif %}
+    </nav>
+  </header>
+
+  <div class="container">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        <ul>
+        {% for category, message in messages %}
+              <li class="{{ 'error-msg' if category == 'error' else 'success-msg' }}">{{ message }}</li>
+        {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+    
+    {% block content %}{% endblock %}
+  </div>
+
+  <footer>
+    &copy; 2025 FocusForge
+  </footer>
+  
+  <script src="app.js"></script>
+</body>
+</html>

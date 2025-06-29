@@ -1,0 +1,17 @@
+.error-msg {
+  color: #e74c3c; /* red */
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.success-msg {
+  color: #27ae60; /* green */
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}

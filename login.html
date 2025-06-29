@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Login – FocusForge</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Navigation (shared across all pages) */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #6c5ce7;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+nav a {
+  text-decoration: none;
+  font-weight: 500;
+  color: #2d3436;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #f0f0f0;
+  color: #6c5ce7;
+}
+
+nav a.active {
+  color: #ff5eaa;
+  font-weight: 600;
+}
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+    .auth-form {
+      max-width: 400px;
+      margin: 80px auto;
+      background: white;
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    }
+
+    .auth-form h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: var(--main-color);
+    }
+
+    .auth-form input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    .auth-form button {
+      width: 100%;
+      padding: 12px;
+      background: var(--main-color);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .auth-form p {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .auth-form a {
+      color: var(--accent-color);
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+<a href="index.html" class="logo">FocusForge</a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="features.html">Features</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <div class="auth-form">
+    <h1>Login</h1>
+    <form method="post" action="/login">
+  <input type="email" name="email" placeholder="Email" required />
+  <input type="password" name="password" placeholder="Password" required />
+  <button type="submit">Log In</button>
+</form>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
